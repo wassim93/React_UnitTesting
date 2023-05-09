@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <Greeting />
-      <Greeting name={"test"} />
+      {/* <Greeting name={"test"} /> */}
     </div>
   );
 }
