@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { getByText, render, screen } from "@testing-library/react";
 import Greeting from "./Greeting";
 
 describe("Greeting component render", () => {
@@ -11,6 +11,13 @@ describe("Greeting component render", () => {
     render(<Greeting name="wassim" />);
     const el = screen.getByText(/greeting wassim/i);
     expect(el).toBeInTheDocument();
+  });
+});
+describe("Testing Button component", () => {
+  test("button render correctly ", () => {
+    render(<Greeting />);
+    const el = screen.getByTestId("btnAction");
+    expect(el).toBeDefined();
   });
 });
 
